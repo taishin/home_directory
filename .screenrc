@@ -1,3 +1,5 @@
+escape ^Tt
+
 # エラー時の端末画面の点滅
 vbell off
  
