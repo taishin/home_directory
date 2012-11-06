@@ -232,11 +232,3 @@ fi
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
-if [ x$TERM = xscreen ]; then
-  setopt complete_aliases # これを有効にするとsshの補完が使える
-  function ssh-screen() {
-    eval SSH_HOST='${'$#'}'
-    screen -t ${SSH_HOST} env TERM=screen ssh "$@"
-  }
-  alias ssh=ssh-screen
-fi
